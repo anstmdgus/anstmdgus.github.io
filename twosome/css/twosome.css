@@ -1,0 +1,461 @@
+@charset "UTF-8";
+/*
+	Author Email    : anstmdgus473@naver.com
+
+	*****************************************
+
+
+	- Header
+	- section
+	- Footer
+	- section inst-popup
+  - section login-popup
+*/
+/* ===================== fonts ================================= */
+@font-face {
+  font-family: OPTI;
+  src: url(../fonts/OPTICopperplate.otf);
+}
+
+@font-face {
+  font-family: OPTILight;
+  src: url(../fonts/OPTICopperplate-Light.otf);
+}
+
+@font-face {
+  font-family: OPTIHeavy;
+  src: url(../fonts/OPTICopperplate-Heavy.otf);
+}
+/* ===================== slider =================================  */
+@media (min-width:991px) {
+      .m{display: none;}
+      .t{display: none;}
+      .p{display: block;}
+    }
+/* ===================== start =================================  */
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color:#000; display: inline-block;}
+h1, h2, h3, h4, h5, h6{font-weight: normal;}
+body{font-size: sans-serif;}
+.blind{display: none;}
+.center-box{position: relative; max-width:1260px; margin: 0 auto;}
+button{ border:2px solid #b50415; background: none;}
+
+/* ====================  icon  ====================================  */
+.icon{
+  background: url(../img/sprite-pc.png) no-repeat;
+  display: inline-block;
+}
+.icon-login1{width: 40px; height: 40px; background-position: -30px -230px;}
+.icon-login2{width: 40px; height: 40px; background-position: -340px -430px;}
+.icon-join{width:40px; height:40px; background-position: -30px -430px;}
+.icon-fb{width:20px; height:20px; background-position: -40px -340px;}
+.icon-blog{width:20px; height:20px; background-position: -140px -340px;}
+.icon-insta{width:20px; height:20px; background-position: -240px -340px;}
+.icon-twitter{width:20px; height:20px; background-position: -340px -340px;}
+.new{width:72px; height:72px; background-position: -315px -216px;}
+.instagram-text{width:330px; height:100px; background-position:-70px -100px;}
+.instagram-logo{width:140px; height:140px;background-position:-430px -330px}
+.icon-close1{width:40px; height:40px; background-position:-130px -430px;}
+.icon-close2{width:40px; height:40px; background-position:-230px -230px;}
+.icon-like{width:40px; height:40px; background-position: -429px -225px;}
+.icon-like-black{width:40px; height:40px; background-position: -530px -228px;}
+.icon-password{width:40px; height:40px; background-position:-130px -230px}
+/* ==================  header s (utility)  =======================  */
+header{
+  position:absolute;
+  top:70px;
+  width:100%;
+  height:80px;
+  font-size: 12px;
+  background: #333;
+  z-index: 2;
+  transition: 0.5s;
+}
+header.open{height: 140px;}
+header::after{
+  content: '';
+  position: absolute;
+  top:10px; left:10px; right:10px;
+  height: 60px;
+  box-sizing: border-box;
+  border:1px solid #fff;
+}
+header .wrap{position:relative; z-index: 1; max-width:1260px; margin:0 auto;}
+header .sns{
+  position: absolute;
+  right:130px;
+  top: -30px;
+}
+header .sns li{
+  float: left;
+  margin-left:20px;
+}
+header .sns i.icon-login1{vertical-align: middle;}
+/* ======  header  (wrap)  ============  */
+header .box{
+  position: relative;
+}
+header h1{
+  float: left;
+  display: inline-block;
+  max-width:210px;
+  max-height:80px;
+  margin-left:30px;
+}
+header .box h1 img{max-width:210px; max-height:80px;}
+nav {
+  height:60px;
+  float: right;
+}
+#icon-menu{display: none;}
+/* ==== (wrap) 로그인, 회원가입 =====  */
+nav .membership {
+  position: absolute;
+  top:-40px; left:30px;
+}
+nav .membership li{
+  margin-right:10px;
+  float:left;
+}
+nav .membership i{vertical-align: middle;}
+/* ======== (gnb) 메뉴 ==========  */
+.gnb{
+  height: 60px;
+  margin-top: 10px;
+  font-family:'OPTI';
+}
+.gnb > li{
+  float:left;
+  margin: 0 20px;
+}
+.gnb > li > a{
+  position: relative;
+  height:60px;
+  color:#ccc;
+  padding-top: 17px;
+  box-sizing: border-box;
+}
+/* === 오버 했을시 밑줄 === */
+.gnb > li > a::after{
+  content: '';
+  display: none;
+  height: 5px;
+  background: #b50415;
+  margin-top: 9px;
+}
+.gnb > li:hover > a::after {
+  display: block;
+}
+
+/* === 2depth메뉴 === */
+.gnb .depth2{
+  display: none;
+  position:absolute;
+  left:0;
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+.gnb .depth2 ul{
+  display: inline-block;
+}
+.gnb .depth2 ul > li{
+  float: left;
+  margin: 0 20px;
+}
+.gnb .depth2 ul > li a{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color:#ccc;
+  padding: 0 10px;
+}
+.gnb .depth2 ul > li a:hover{
+  background: #fff;
+  color:#000;
+}
+/* ====== header e ( 메뉴 끝! ) ======  */
+/* ======  1.main 사진 및 슬라이드  ======  */
+section{position: relative; width:100%; height:100%; padding-top: 210px;}
+.main-slider{position:relative; top:0; left:0; width:100%;}
+.main-slider .swiper-slide img{width: 100%;}
+.main-slider .swiper-pagination-bullet{
+  width:20px;
+  height:20px;
+  margin-left: 15px;
+  display: inline-block;
+  border-radius: 100%;
+  border: 4px solid #b50415;
+  box-shadow: #777 4px 4px 4px;
+  background: none;
+  opacity: 1;
+}
+.main-slider .swiper-pagination-bullet-active{
+  width:60px;
+  background-color:#b50415;
+  border-radius: 30px;
+  opacity: 1;
+}
+/* ======  2.스페셜 케이크  ======  */
+.special-cake{position:relative; width:100%;}
+.special-cake > h2{padding-top:60px; font-family:'OPTI'; text-align: center;}
+.special-cake  .wrap{
+  position: relative;
+  top:130px;
+  font-size: 12px;
+  font-family: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.special-cake .wrap:hover{top:0px;}
+.special-cake .wrap figcaption{
+  margin-bottom:10px;
+  font-family: 'OPTI';
+  text-align: center;
+  opacity: 1;
+  transition: 0.5s;
+}
+.special-cake .wrap:hover figcaption{opacity: 0;}
+.special-cake .box{max-width:282px; max-height:282px; border:1px solid #ccc;}
+.special-cake .box .img-box{width:100%; height:100%;}
+.special-cake .box .img-box img{width:100%; height:100%; display: block;}
+.special-cake .box .img-box span{
+  position:absolute;
+  text-align: center;
+  padding-top: 26px;
+  color:white;
+}
+ /* 버튼 */
+.swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev{
+    background-image: none;
+    font-size: 4em;
+    right:5px;
+    z-index: 0;
+  }
+.swiper-button-prev,
+  .swiper-container-rtl .swiper-button-next{
+    background-image: none;
+    font-size: 4em;
+    left:0px;
+    z-index: 0;
+  }
+/* 스페셜케이크 오버후 클릭  */
+.special-cake dl{
+  position: relative;
+  width:100%;
+  height:282px;
+  text-align: center;
+  display: none;
+  font-size: 14px;
+}
+.special-cake dl dt{padding-top:30px; font-weight:bold; }
+.special-cake dl dd{margin: 20px;}
+.special-cake dl button{width:140px; height:40px; margin-top:10px;}
+/* 모바일 왼쪽 오른쪽 버튼  */
+.swiper-button-next,.swiper-button-prev{display: none;}
+/* 3. 원액 상품 출시 */
+.undiluted-solution{
+  position: relative;
+  width:100%;
+  height:240px;
+  background: #edd5bf;
+  z-index: 3;
+  overflow: hidden;
+}
+.undiluted-solution .center-box{padding-top:30px; width:600px; margin-top:-200px; opacity: 0;}
+.undiluted-solution .box {margin: 20px 0 0 40px; text-align: center; float: right;}
+.undiluted-solution .box a {
+  width:140px;
+  height:40px;
+  font-size: 14px;
+  background: #b50415;
+  line-height: 40px;
+  margin-top: 20px;
+  color:white;
+}
+.ani-updown{
+  animation: ani-updown 1s forwards;
+}
+@keyframes ani-updown {
+  0%{margin-top:-100px; opacity: 0;}
+  100%{margin-top:0px; opacity: 1;}
+}
+/* 4. 투썸 스토리 */
+.twosome-story{
+  position: relative;
+  height:800px;
+  background:url(../img/twosome-story.png);
+  background-size:cover;
+  font-family: 'OPTI';
+  text-align: center;
+  color:#e2bc8a;
+  overflow: hidden;
+}
+.twosome-story h2 {padding:90px 0 20px; box-sizing: border-box; font-size: 50px;}
+.twosome-story h2, .big span{color:#b50415}
+.twosome-story .big{font-size:30px; line-height:80px; opacity:0;}
+.twosome-story .small{font-size:18px; line-height:50px; opacity:0;}
+.twosome-story a{
+  width:140px;
+  height:40px;
+  font-size: 14px;
+  background: #b50415;
+  line-height: 40px;
+  margin-top:10px;
+  color:white;
+}
+.ani-left{
+  animation: ani-left 1s forwards;
+}
+@keyframes ani-left{
+  0%{margin-right:-1600px; opacity:0;}
+  100%{margin-right:0px; opacity:1;}
+}
+/* 5. 인스타그램 */
+.instagram{position: relative;}
+.instagram .wrap{
+  position: relative;
+  max-width:400px;
+  max-height:260px;
+  padding-top:50px;
+  margin:0px auto;
+  text-align: center;
+}
+.instagram ul{margin-bottom: 30px;}
+.instagram ul li{
+  position: relative;
+}
+.instagram ul li a{
+  display: block;
+  margin: 10px;
+  overflow: hidden;
+}
+.instagram ul li a img{display: block; width: 100%;transition: 0.5s;}
+.instagram ul li a:hover img{transform:scale(1.2);}
+
+/* 6. footer */
+footer{position: relative; height:150px; font-size:12px; background:#333; color:#edd5bf;}
+footer .center-box{height:100%; text-align: center;}
+footer ul{position: relative; padding-top:20px; height:20px;}
+footer ul li {width:16%; float: left;}
+footer ul li a {color:#edd5bf;}
+footer address{
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+  font-style: normal;
+}
+/* 7. 인스타 그램 팝업창 */
+.inst-popup{
+  display:none; position:fixed;
+  top:0;
+  width:100%; height:100%;
+  z-index: 3;
+}
+.inst-popup .background{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#333;
+  opacity:0.8;
+  z-index: 4
+}
+.inst-popup .center-box{height:940px; z-index: 8;}
+.inst-popup .center-box > button{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+}
+.inst-popup .popup-body{
+  position: relative;
+  top:200px;
+  width:900px;
+  /* height:500px; */
+  margin: 0 auto;
+}
+.inst-popup .popup-body .img-box{float:left;}
+.inst-popup .popup-body .img-box img{width:100%; height:100%;}
+.inst-popup .popup-body .text-box{
+  width:300px;
+  height:500px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'OPTI';
+  float: right;
+}
+.inst-popup .text-box h3{font-size: 14px;}
+.inst-popup .text-box h3 img{border-radius:100%; vertical-align: middle; margin-right: 5px;}
+.inst-popup .popup-text{
+  margin-top:10px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+.inst-popup button{font-size:30px; border: none; vertical-align: middle; margin-right: 5px;}
+.inst-popup button.on{color:#b4142d;}
+.inst-popup .icon-like-black{display: none;}
+.inst-popup span{vertical-align:middle;}
+
+/* 8. 로그인 팝업창 */
+.login-popup{
+  display: none;
+  position: fixed;
+  top:210px;
+  width:100%;
+  height:700px;
+  font-family:'OPTI';
+  background: #ccc;
+  z-index: 5;
+}
+.login-popup .center-box{height:100%;}
+.login-popup .center-box .icon-close2{position: absolute; top:10px; right:10px; border: none;}
+.login-popup .login-form{
+  position: absolute;
+  top:50px;
+  left:60px;
+  width:46%;
+  height:600px;
+  background: #fff;
+  color: #777;
+  text-align: center;
+}
+.login-form h2{width:340px; margin: 110px auto 30px; font-size: 18px;}
+.login-form p{font-size:12px;}
+.login-form form{position: relative;margin:20px auto 80px;}
+.row label{position: absolute; margin-top: 20px;}
+.login-form .row input {
+  width:300px;
+  height:40px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+.login-form button{
+  position: relative;
+  margin:20px 10px 0 10px;
+  width:140px;
+  height:40px;
+  font-size: 14px;
+  color:#777;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.login-form button:hover{
+  background:#FFCC00;
+  color:white;
+}
+.login-popup .img-box{
+  position: absolute;
+  top:50px;
+  right:60px;
+  width:45%;
+  height:600px;
+  background: url(../img/login-img.png)
+}
+/* 8. 로그인 팝업창 end */

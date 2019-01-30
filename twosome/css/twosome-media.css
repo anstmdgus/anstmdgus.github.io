@@ -1,0 +1,168 @@
+/* 테블릿환경 0~990px */
+@media screen and (max-width:990px){
+  /*========== icon 아이콘 ========== */
+  .icon{
+    background: url(../img/sprite-mobile2.png) no-repeat;
+    display: inline-block;
+  }
+  .icon-login1{width: 40px; height: 40px; background-position: -30px -230px;}
+  .icon-login2{width: 40px; height: 40px; background-position: -340px -430px;}
+  .icon-join{width:40px; height:40px; background-position: -30px -439px;}
+  .new{width:72px; height:72px; background-position: -352px -214px}
+  .instagram-text{width:185px; height:60px; background-position:-108px -103px; vertical-align: middle;}
+  .instagram-logo{width:100px; height:100px;background-position:-450px -350px; vertical-align: middle;}
+  .icon-close1{width:40px; height:40px; background-position:-135px -430px;}
+  .icon-close2{width:40px; height:40px; background-position:-234px -234px;}
+  .icon-password{width:40px; height:40px; background-position:-130px -230px}
+  .icon-menu{width:50px; height:50px; background-position: -225px -418px;}
+  /* .icon-like{width:40px; height:40px; background-position: -430px -230px;}
+  .icon-like-black{width:40px; height:40px; background-position: -530px -228px;} */
+  /*== header, swiper-container, special-cake, undiluted-solution, twosome-story,instagram, footer, inst-popup, login-popup == */
+
+  /* ==================  slider  =======================  */
+
+  .m{display: none;}
+  .t{display: block;}
+  .p{display: none;}
+
+  /* ==================  header s (utility)  =======================  */
+  header{top:0px; height:80px; font-size: 12px;}
+  header.open{height:80px;}
+  header .wrap{position:relative; width:100%; height:80px;}
+  header::after{height:60px;}
+  header .sns{display:none;}
+  /* == 메뉴 아이콘 == */
+  header .icon-menu{position:absolute; top:10px; right:10px; width:50px; height:60px; border: none; z-index:1}
+  header .box h1{margin-left:20px;}
+  /* == nav(메뉴 바) == */
+  nav{position: fixed; top:0; right:-300px; width:300px; height:100%; background:#111; z-index:5; transition: 0.5s;}
+  nav .membership{position:relative; left:0; padding:130px 0 0 30px; overflow: hidden;}
+  nav .membership li{margin: 0 auto;}
+  nav .membership a{padding:20px; color:#ccc;}
+  nav .gnb{height:100%;}
+  nav .gnb > li{width:100%; margin: 0 auto; text-align: center;}
+  nav .gnb .depth2{position: relative; padding:20px 0 30px 0;}
+  nav .gnb .depth2 ul li {width:100%; margin: 0 auto;}
+  .icon-menu{
+    position: absolute; top:20px; right:10px;
+    height: 30px; width: 25px; z-index: 3;
+  }
+
+  /* 화면의 오른쪽에 숨겨져 있다가 토글메뉴버튼을 누르면 나오게 한다. */
+  #icon-menu:checked ~ nav{right:0px; overflow-y:auto}
+  #icon-menu:checked ~ .bg{
+    content: '';
+    position: fixed;
+    top:0; left:0; bottom:0; right:0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  /* ====== header e ( 메뉴 끝! ) ======  */
+
+  /* ======  1.main 사진 및 슬라이드  ======  */
+  section{padding-top:80px;}
+  .swiper-pagination{display: none;} /* 버튼 display:none;*/
+
+  /* ======  2.스페셜 케이크  ======  */
+  .swiper-button-next,.swiper-button-prev{display:block;}
+  .special-cake h2{padding-top:20px;}
+  .special-cake .center-box{width:93%; padding:20px; box-sizing: border-box;}
+  .special-cake .wrap{top:0px;}
+  .special-cake .box .img-box span{padding: 27px 0px 0 2px}
+  figcaption{display: none;}
+
+  /* 3. 원액 상품 출시 */
+  .undiluted-solution{z-index: 0;}
+  .undiluted-solution .center-box{padding: 20px;}
+  /* 4. 투썸 스토리 */
+  .twosome-story h2 {padding:100px 0 40px; font-size:30px;}
+  .twosome-story .big{font-size:22px;}
+  .twosome-story .small{font-size:12px;}
+
+  /* 5. 인스타그램 */
+  .instagram .wrap{
+    max-height:130px;
+    padding:40px;
+  }
+/* 7. 인스타 그램 팝업창  */
+  .inst-popup{z-index:4; overflow-y: auto;}
+  .inst-popup .popup-body{top:200px;}
+  .inst-popup .center-box > button{position:fixed; top:0px; right:0px; z-index: 2}
+  .instagram ul{margin-bottom: 0px;}
+
+/* 8. 로그인 팝업창  */
+  .login-popup{height:100%; top:0px;}
+  .login-popup .img-box{width:100%; height:100%;}
+  .login-popup .login-form{width:auto; right:60px; overflow-y:auto; padding: 80px 150px 50px;}
+  .login-popup .img-box{width:auto; display: none;}
+}
+ @media screen and (max-width:899px){
+  .inst-popup .popup-body{top:0px;}
+  .inst-popup .popup-body .text-box{width:100%; height:100%;}
+  .inst-popup .popup-body .img-box{float: none;}
+ }
+
+  /* 테블릿환경 0~990px end */
+  /* 모바일 0~767px */
+
+@media screen and (max-width:767px){
+  /* ==================  slider  =======================  */
+
+  .m{display: block;}
+  .t{display: none;}
+  .p{display: none;}
+    /* ======  아이콘  ======  */
+  .new{width:41px; height:50px; background-position: -296px -230px;}
+  /* .icon-close1{width:30px; height:30px; background-position:-234px -234px;} */
+    /* ======  header  ======  */
+  header{max-height:52px;}
+  header::after{height:36px;}
+  header .box h1 img{width:120px; height:52px;}
+  header .icon-menu{top:0px; right:5px;}
+  /* ======  1.main 사진 및 슬라이드  ======  */
+  section{padding-top: 52px;}
+  .main-slider .swiper-wrapper{top:0px; width:100%; max-height:300px;}
+
+  /* ======  2. 스페셜 케이크  ======  */
+  .special-cake{ font-size:12px;}
+  .special-cake h2{padding:10px; font-size: 12px;}
+  .special-cake .box .img-box span{padding: 13px 0px 0 1px; font-size:10px;}
+  .special-cake dl{height:100%;font-size: 12px;}
+  .special-cake dl dd{margin: 10px;}
+  .special-cake dl button{width:80px; height:25px; margin-top:0px; font-size: 1em }
+  .special-cake dd:nth-child(3),.swiper-button-next,.swiper-button-prev{display: none;}
+
+  /* ======  3. 원액 상품 출시  ======  */
+  .undiluted-solution{height:130px; font-size: 8px;}
+  .undiluted-solution .center-box{width:300px;}
+  .undiluted-solution .center-box img{width:131px; height:90px;}
+  .undiluted-solution .box{height:70px; margin:10px auto;}
+  .undiluted-solution .box a{width:80px; height:25px; font-size:11px; line-height:25px; margin-top: 10px;}
+
+/* ======  4. 투썸 스토리  ======  */
+  .twosome-story{height:320px; background-position: right top;}
+  .twosome-story h2 {padding: 52px 0 27px; font-size: 15px;}
+  .twosome-story .big{line-height:30px; font-size: 10px;}
+  .twosome-story .small{display: none;}
+  .twosome-story a {width:80px; height:25px; line-height: 25px; margin-top:27px; font-size: 11px; }
+
+  /* ======  6. footer  ======  */
+  footer{height:180px; font-size: 11px; padding: 0 10px;}
+  footer ul {height:10px;}
+  footer ul li{width:auto; float: none; display: inline-block; padding: 0 10px;}
+  footer li:nth-child(5),footer li:nth-child(6){display: none;}
+  footer address{font-size:11px;}
+  footer address span{display: none;}
+
+  /* ======  7. 인스타 팝업창  ======  */
+  .inst-popup .popup-body{top:0px; width:100%; height:100%;}
+  .inst-popup .popup-body .img-box img{width:100%; height:100%;}
+  .inst-popup .popup-body .text-box{position:relative; width:100%;height:100%;}
+
+  /* ======  8. 로그인 팝업창  ======  */
+  .login-popup .center-box{height:100%;}
+  .login-popup .login-form{top:0px; left:0px; width:100%; height:100%; padding: 0px;}
+  .login-popup .center-box .icon-close2{right:0px; z-index:1}
+  .login-form h2 {font-size: 14px;}
+  .login-form .row input{width:265px; font-size: 12px;}
+  .login-form button{width:120px; height:35px; font-size:12px; margin:20px 9px 0px 9px;}
+  .login-form p{font-size:11px;}
