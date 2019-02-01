@@ -238,8 +238,9 @@ header nav ul li a:hover{
 	font-size: 22px;
 	color: #4d4d4d;
 	text-transform: uppercase;
-	letter-spacing: 50px;
+	letter-spacing: 50;
 }
+
 
 .services ul li p{
 	font-family: 'open_regular', arial;
