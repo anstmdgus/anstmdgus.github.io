@@ -25,6 +25,44 @@ $(document).ready(function(){
 
 		return false;
 	});
+	var player=$('video')[0];
+	$('#btn-play-pause').click(function(){
+	  if(player.paused){//일시정지 상태이면
+	    player.play();
+	    $(this).find('i').text('pause');
+	  }else{//재생중이면
+	    player.pause();
+	    $(this).find('i').text('play_arrow');
+	  }
+	})
 
+
+	$('#btn-replay').click(function(){
+	  player.currentTime=0;
+	  player.play();
+	  $('#btn-play-pause i').text('pause');
+	})
+
+
+	$('#btn-volume').click(function(){
+	  if(player.muted){//음소거 상태이면
+	    player.muted=false;
+	    $(this).find('i').text('volume_up');
+	  }else{//아니면
+	    player.muted=true;
+	    $(this).find('i').text('volume_off');
+	  }
+	})
+
+
+	$('#btn-fullscreen').click(function(){
+	  if($(this).find('i').text()=='fullscreen'){
+	    $('body').addClass('fullscreen');
+	    $(this).find('i').text('fullscreen_exit');
+	  }else{
+	    $('body').removeClass('fullscreen');
+	    $(this).find('i').text('fullscreen');
+	  }
+	})
 
 });

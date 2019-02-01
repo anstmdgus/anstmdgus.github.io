@@ -75,8 +75,7 @@
 }
 
 
-.blind{font-size: 0; position: absolute; left:-9999px;}
-button{background: none; border: 0;}
+
 
 /*  General CSS*/
 .wrapper{
@@ -92,7 +91,7 @@ button{background: none; border: 0;}
 .social a,
 footer .f_cols a,
 footer .f_cols ul li a,
-.recent_work .work_title,
+.recent_work a.work_title,
 header nav ul li a,
 #box #submit{
 	transition:all .2s linear;
@@ -109,6 +108,7 @@ header{
 	height: 130px;
 	background-color: #ffffff;
 	z-index: 9999;
+
 }
 
 header .logo{
@@ -148,15 +148,14 @@ header nav ul li a:hover{
 .billboard{
 	width: 100%;
 	height: 650px;
-	background: url('../img/main.jpg') no-repeat center;
-  background-size: cover;
+	background: url('../소스/img/main.jpg') no-repeat center;
+  background-size:cover;
 	position: relative;
 	overflow: hidden;
 }
 
 .billboard .caption{
-	width: 1200px;
-  margin:0 auto;
+  width:1200px;
 }
 
 .billboard .caption .cap_title{
@@ -164,22 +163,17 @@ header nav ul li a:hover{
 	font-size: 50px;
 	color: #4d4d4d;
 	margin: 200px 0 30px;
-  width: 50%;
 }
 
 .billboard .caption .cap_desc{
 	font-family: 'open_regular', arial;
 	font-size: 16px;
 	color: #4d4d4d;
-	margin-bottom: 30px;
-  width: 50%;
+	margin-bottom:60px;
 }
 
 .billboard .caption a{
-  display: inline-block;
-	width: 300px; height: 60px;
-  line-height: 60px;
-  text-align: center;
+	padding: 15px 80px;
 	background: #4d4d4d;
 	color: #fff;
 	font-family: 'open_semibold', arial;
@@ -198,6 +192,7 @@ header nav ul li a:hover{
 	background: #ffffff;
 	color: #4d4d4d;
 }
+
 
 .billboard .caption a i{
 	width: 17px;
@@ -257,8 +252,6 @@ header nav ul li a:hover{
 /*  Video  */
 .video{
 	text-align: center;
-	border-top: 1px #e7e7e7 solid;
-	border-bottom: 1px #e7e7e7 solid;
 	margin-bottom: 100px;
 	padding-top: 100px;
 }
@@ -284,41 +277,41 @@ header nav ul li a:hover{
 }
 
 .video .ex_video{
-  margin:5px auto;
-	width: 686px;
+  width:686px;
+  height:686px;
+  margin: auto;
+	margin-bottom: -200px;
 }
+button{border:0; background:none;}
+    .wrap{text-align:center; width:700px; margin:auto;}
+    .wrap h3{font-size:30px; color:#4d4d4d; margin-bottom:20px;}
+    .wrap video{width:100%; height:100%; margin-bottom:10px;
+       box-sizing:border-box;
+    }
+.wrap video{width:100%; height:100%; margin-bottom:10px;
+      box-shadow: 0 0 5px 5px rgb(243,241,239); box-sizing:border-box;
+    }
+    body.fullscreen .ex_video{
+      position: fixed; width:100%; height: 100%; left:0; top:0;
+      background: #fff;
+    }
+    body.fullscreen .ex_video .wrap{
+      position: absolute; top:0; left:0; right:0; bottom:30px;
+      width: 100%; background: #000;
+    }
+    body.fullscreen .ex_video .wrap video{margin: 0;}
+    body.fullscreen #control{
+      position: absolute; bottom:0; width: 100%; background: #fff;
+    }
 
-video{
-  width: 100%; height:100%;
-  box-shadow: 0 0 5px 5px rgb(243, 241, 239);
-  background: #fff;
-}
-
-body.fullscreen .ex_video{
-  position: fixed;
-  width: 100%; height: 100%;
-  top:0; left:0;
-  z-index: 1000;
-  margin: 0;
-}
-
-body.fullscreen #player-control{
-  position: absolute;
-  bottom:0; width: 100%;
-  background: #fff;
-}
-
-#player-control{
-  padding-top: 5px;
-}
 
 /*  Recent work  */
 .recent_work{
-	margin-bottom: 100px;
+	margin-bottom:100px;
 	overflow: hidden;
 }
 
-.recent_work h2.S_title{
+.recent_work h3.S_title{
 	font-family: 'open_bold', arial;
 	font-weight: bold;
 	font-size: 30px;
@@ -341,16 +334,15 @@ body.fullscreen #player-control{
 	margin-right: 0;
 }
 
-.recent_work .work_img{
-  width: 100%;
-  height: 100%;
-  background: red;
-  position: relative;
-  display: block;
+.recent_work a.work_img{
+	width: 262px;
+	height: 320px;
+	background: red;
+	position: relative;
 }
 
 
-.recent_work .work_title{
+.recent_work a.work_title{
 	display: inline-block;
 	text-decoration: none;
 	width: 262px;
@@ -365,7 +357,7 @@ body.fullscreen #player-control{
 	bottom: 0;
 }
 
-.recent_work .work:hover .work_title{
+.recent_work .work:hover a.work_title{
 	bottom: 66px;
 }
 
@@ -490,30 +482,13 @@ footer{
 	background: #3b3b3b;
 	padding: 100px 0;
 	overflow: hidden;
-  text-align: center;
-  color:#fff;
-  font-size: 14px;
-  line-height: 20px;
 }
 
 footer .f_cols{
-	width: 270px;
+	width: 100%;
 	height: auto;
 	float: left;
-	margin-left: 40px;
-}
 
-footer .f_cols:first-child{
-	margin-left: 0;
-}
-
-footer .f_cols h3{
-	font-family: 'open_semibold', arial;
-	font-weight: bold;
-	font-size: 18px;
-	color: #ffffff;
-	margin-bottom: 30px;
-	letter-spacing: 1px;
 }
 
 footer .f_cols p{
@@ -523,44 +498,8 @@ footer .f_cols p{
 	letter-spacing: 1px;
 	color: #ebebeb;
 	margin-bottom: 20px;
+  text-align: center;
 }
-
-footer .f_cols span.phone{
-	display: block;
-	font-family: 'open_bold', arial;
-	font-weight: bold;
-	color: #b5b5b5;
-}
-
-footer .f_cols a{
-	display: inline-block;
-	font-family: 'open_regular', arial;
-	color: #b5b5b5;
-}
-
-footer .f_cols a:hover{
-	color: #ebebeb;
-}
-
-footer .f_cols ul li{
-	list-style: none;
-	margin-bottom: 15px;
-}
-
-
-footer .f_cols ul li a{
-	text-decoration: none;
-	color: #ebebeb;
-	font-family: 'open_regular', arial;
-	font-family: 14px;
-	border-bottom: 1px #3b3b3b solid;
-}
-
-
-footer .f_cols ul li a:hover{
-	border-bottom: 1px #ebebeb solid;
-}
-
 
 
 /*  Subscription pop-up  */
@@ -605,14 +544,15 @@ footer .f_cols ul li a:hover{
 	height: 50px;
 	background: #ffffff;
 	border: 1px #edebeb solid;
-	margin: 0 auto 10px auto;
+	margin: 0px auto 10px auto;
 	padding: 0 20px;
 	outline: none;
 	color: #424242;
 }
 
 #box #submit{
-  display: block;
+  width: 215px;
+	height: 50px;
 	font-family: 'open_bold', arial;
 	font-weight: bold;
 	font-size: 16px;
@@ -622,9 +562,9 @@ footer .f_cols ul li a:hover{
 	color: #424242;
 	border: 2px #424242 solid;
 	padding: 15px 54px;
-	margin: 20px auto;
+	margin-top: 20px;
 	outline: none;
-  width: 257px;
+  margin-bottom: 20px;
 }
 
 #box #submit:hover{
@@ -633,8 +573,6 @@ footer .f_cols ul li a:hover{
 	background: #424242;
 	border: 2px #424242 solid;
 }
-
-#box a{color:#424242;}
 
 ::-webkit-input-placeholder {
    color: #d1d0d0;
@@ -650,4 +588,8 @@ footer .f_cols ul li a:hover{
 
 :-ms-input-placeholder {
    color: #d1d0d0;
+}
+#box p a {
+  color:#424242;
+  border:none;
 }
