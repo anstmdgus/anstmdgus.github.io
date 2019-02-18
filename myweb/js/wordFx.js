@@ -49,6 +49,7 @@ $(function(){
 				}
 			}
 		];
+// =================== 메인 애니메이션 글씨 반복 효과 =========================== //
 		class Slideshow {
 			constructor(el) {
 				this.DOM = {};
@@ -68,28 +69,46 @@ $(function(){
 			show(direction) {
 				if ( this.isAnimating ) return;
 				this.isAnimating = true;
-				this.DOM.slides[newPos].style.opacity = 1;
-				this.DOM.bgs[newPos].style.transform = 'none';
+
+				let newPos;
+				let currentPos = this.current;
+				if ( direction === 'next' ) {
+					newPos = currentPos < this.slidesTotal - 1 ? currentPos+1 : 0;
+				}
+				else if ( direction === 'prev' ) {
+					newPos = currentPos > 0 ? currentPos-1 : this.slidesTotal - 1;
+				}
+
 				anime({
 					targets: this.DOM.bgs[currentPos],
 					duration: 600,
 					easing: [0.2,1,0.3,1],
+					translateY: ['0%', direction === 'next' ? '-100%' : '100%'],
 					complete: () => {
-						this.DOM.slides[currentPos].classList.remove('slide--current');
-						this.DOM.slides[currentPos].style.opacity = 0;
-						this.DOM.slides[newPos].classList.add('slide--current');
+						this.DOM.slides[currentPos].classList.remove('.st-panel');
+						this.DOM.slides[currentPos].style.opacity = 1;
+						this.DOM.slides[newPos].classList.add('.st-panel');
 						this.words[newPos].show(effects[newPos].show).then(() => this.isAnimating = false);
 					}
 				});
-
 				this.words[newPos].hide();
 				this.words[this.current].hide(effects[currentPos].hide).then(() => {
-				this.current = newPos;
+					this.current = newPos;
 				});
 			}
 		}
 		const slideshow = new Slideshow(document.querySelector('.slideshow'));
-})
+		document.querySelector('.st-control').addEventListener('click', () => slideshow.show('prev') );
+		document.addEventListener('keydown', (ev) => {//keydown 키를 누를때마다 이벤트가 반복적으로 전송합니다
+			const keyCode = ev.keyCode || ev.which;
+			if ( keyCode === 37 ) {
+				slideshow.show('prev');
+			}
+			else if ( keyCode === 39 ) {
+				;
+			}
+		})
+	})
 // ================= 메인글씨 애니메이션 효과  ======================== //
 {
     // From https://davidwalsh.name/javascript-debounce-function.
@@ -291,7 +310,7 @@ $(function(){
 
     window.Word = Word;
 };
-	(function( $ ) {
+(function( $ ) {
   "use strict";
   $(function() {
     function animated_contents() {
