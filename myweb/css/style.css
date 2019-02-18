@@ -152,10 +152,10 @@ a{text-decoration: none; color:#000; display: inline-block;}
 	width: 81%;
 	left: 10%;
 	text-align: center;
-	line-height: 50px;
+	line-height: 25px;
 	/* margin: -35px 0 0 0; */
 	padding: 0;
-	top:17%;
+	top:20%;
 	-webkit-backface-visibility: hidden;
 }
 .content {
