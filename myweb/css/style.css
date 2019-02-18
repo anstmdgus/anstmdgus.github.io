@@ -155,7 +155,7 @@ a{text-decoration: none; color:#000; display: inline-block;}
 	line-height: 25px;
 	/* margin: -35px 0 0 0; */
 	padding: 0;
-	top:20%;
+	top:17%;
 	-webkit-backface-visibility: hidden;
 }
 .content {
@@ -262,8 +262,8 @@ a{text-decoration: none; color:#000; display: inline-block;}
 	.st-deco{width: 120px; height: 120px; margin-left: -60px;}
 	[data-icon]:after {font-size: 60px; transform: rotate(-45deg) translateY(15%);}
 }
-.st-panel{display: none;}
-#st-panel-3{display: block;}
+/* .st-panel{display: none;}
+#st-panel-3{display: block;} */
 /*========================= About Me ======================================= */
 #st-panel-2{position: relative; overflow:scroll;}
 .About-box{position:relative; top:30%; width:100%;}
@@ -432,3 +432,4 @@ a{text-decoration: none; color:#000; display: inline-block;}
 /*========================= project end  ======================================= */
 /*========================= contact  =========================================== */
 	#st-panel-5 p{position: relative; top:45%; font-size: 25px; line-height: 60px; }
+	@media screen and (max-width:992px) {#st-panel-5 p{font-size:19px;}}
