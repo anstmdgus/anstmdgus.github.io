@@ -216,7 +216,7 @@ a{text-decoration: none; color:#000; display: inline-block;}
 .word--1 {font-weight:500; text-transform:uppercase; font-size: 9vw;}
 .shapes {position: fixed;top: 0;left: 0;}
 
-/* @media screen and (max-width: 40em) {.slide .word {font-size:25px;}}
+@media screen and (max-width: 40em) {.slide .word {font-size:25px;}}
 .st-panel > p {
 	position: absolute;
 	text-align: center;
@@ -230,7 +230,7 @@ a{text-decoration: none; color:#000; display: inline-block;}
 	top: 55%;
 	margin: 10px 0 0 0;
 	-webkit-backface-visibility: hidden;
-} */
+}
 #st-control-1:checked ~ .st-scroll #st-panel-1 p,
 #st-control-2:checked ~ .st-scroll #st-panel-2 p,
 #st-control-3:checked ~ .st-scroll #st-panel-3 p,
@@ -262,8 +262,8 @@ a{text-decoration: none; color:#000; display: inline-block;}
 	.st-deco{width: 120px; height: 120px; margin-left: -60px;}
 	[data-icon]:after {font-size: 60px; transform: rotate(-45deg) translateY(15%);}
 }
-/* .st-panel{display: none;}
-#st-panel-4{display: block;} */
+.st-panel{display: none;}
+#st-panel-3{display: block;}
 /*========================= About Me ======================================= */
 #st-panel-2{position: relative; overflow:scroll;}
 .About-box{position:relative; top:30%; width:100%;}

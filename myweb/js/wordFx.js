@@ -107,6 +107,25 @@ $(function(){
 			else if ( keyCode === 39 ) {
 				;
 			}
+
+			"use strict";
+		  $(function() {
+		    function animated_contents() {
+		      $(".zt-skill-bar > div ").each(function (i) {
+		        var $this  = $(this),
+		        skills = $this.data('width');
+						$this.css({'width' : skills + '%'});
+					});
+		    }
+				if(jQuery().appear){
+		      $('.zt-skill-bar').appear().on('appear', function() {
+		        animated_contents();
+		      });
+		    }
+				else{
+		      animated_contents();
+		    }
+		  });
 		})
 	})
 // ================= 메인글씨 애니메이션 효과  ======================== //
@@ -311,24 +330,24 @@ $(function(){
     window.Word = Word;
 };
 	(function( $ ) {
-  "use strict";
-  $(function() {
-    function animated_contents() {
-      $(".zt-skill-bar > div ").each(function (i) {
-        var $this  = $(this),
-        skills = $this.data('width');
-				$this.css({'width' : skills + '%'});
-			});
-    }
-		if(jQuery().appear){
-      $('.zt-skill-bar').appear().on('appear', function() {
-        animated_contents();
-      });
-    }
-		else{
-      animated_contents();
-    }
-  });
+  // "use strict";
+  // $(function() {
+  //   function animated_contents() {
+  //     $(".zt-skill-bar > div ").each(function (i) {
+  //       var $this  = $(this),
+  //       skills = $this.data('width');
+	// 			$this.css({'width' : skills + '%'});
+	// 		});
+  //   }
+	// 	if(jQuery().appear){
+  //     $('.zt-skill-bar').appear().on('appear', function() {
+  //       animated_contents();
+  //     });
+  //   }
+	// 	else{
+  //     animated_contents();
+  //   }
+  // });
 
     // 스크롤 이용한 project 보이게 하기 //
 	$(function() {
