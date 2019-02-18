@@ -180,7 +180,6 @@ a{text-decoration: none; color:#000; display: inline-block;}
 	opacity: 0;
 	z-index: 1;
 }
-
 .slide--current {opacity: 1; z-index: 100;}
 .slide__bg {
 	position: absolute;
@@ -263,7 +262,7 @@ a{text-decoration: none; color:#000; display: inline-block;}
 /* .st-panel{display: none;}
 #st-panel-3{display: block;} */
 /*========================= About Me ======================================= */
-#st-panel-2{position: relative; overflow:scroll;}
+#st-panel-2{position: relative; overflow:scroll; -webkit-overflow-scrolling:touch;}
 .About-box{position:relative; top:33%; width:100%;}
 .About-box img{display:block; max-width:56%; height:auto; line-height: 1;}
 .text-name{padding: 0 0 15% 15px;}
@@ -283,7 +282,7 @@ a{text-decoration: none; color:#000; display: inline-block;}
 }
 /*========================= About Me end ======================================= */
 /*========================= Skill  ======================================= */
-#st-panel-3{position: relative; min-height: 100vh; overflow:scroll;}
+#st-panel-3{position: relative; min-height: 100vh; overflow:scroll;-webkit-overflow-scrolling:touch;}
 .skill-box{position:relative; top:25%; width:100%;}
 .skill-work .process{min-height:330px; padding:50px; box-sizing:border-box;}
 .skill-work .process img{width:100%; height:100%; margin-bottom: 15px;}
@@ -358,7 +357,7 @@ a{text-decoration: none; color:#000; display: inline-block;}
 }
 /*========================= Skill end  ======================================= */
 /*========================= project  ======================================= */
-#st-panel-4{position:relative; min-height: 100vh; overflow:scroll;}
+#st-panel-4{position:relative; min-height: 100vh; overflow:scroll;-webkit-overflow-scrolling:touch;}
 .gallery-figure{
 	position:relative;
 	margin:35% 0 5% 0;
