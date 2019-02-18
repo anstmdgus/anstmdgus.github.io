@@ -1,12 +1,12 @@
 @charset "UTF-8";
-*{margin: 0; padding:0; font-family:'Noto Sans KR'}
+*{margin: 0; padding:0;}
 li{list-style: none;}
 a{text-decoration: none; color:#000; display: inline-block;}
 .center-box{max-width:1260px; height:100%; margin:0 auto;}
 /* font-family{'RaphaelIcons','Do Hyeon'} */
 /*============================== start ======================== */
 /* body */
-.demo-1 {
+/* .demo-1 {
 	--color-text: #fff;
 	--color-bg: #101010;
 	--color-link: #fff;
@@ -21,7 +21,7 @@ a{text-decoration: none; color:#000; display: inline-block;}
 	--color-bg-slide-7: #bf2525;
 	--color-bg-slide-8: #d6d1d1;
 	--color-bg-slide-9: #000000;
-}
+} */
 .codrops-top a{color:white;}
 /*========================= 메뉴 start  ===================== */
 /* st-container : 메뉴 컨트롤 */
